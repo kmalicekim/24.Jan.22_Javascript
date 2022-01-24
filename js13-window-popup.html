@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function test(){
+            var val=document.getElementsByName("test")[0].value;
+            opener.document.getElementsByTagName("h1")[1].innerHTML=val;
+            close(); // self.close() 랑 같은 것
+        }
+
+        // 자식창에서 부모창 함수 호출 : window.opener.[부모창 함수]
+        // 자식창에서 부모창 ID값 가져오기 : opener.document.getElementById([부모창 ID값]).value()
+        // 자식창에서 부모창 ID에 value 설정 : window.opener.document.getElementById([부모창 ID값]).value = [변경값]
+        // 팝업창(자식창) 닫기 : self.close()
+
+    </script>
+    
+</head>
+<body>
+    
+	<input type="text" name="test"/>
+	<input type="button" onclick="test()" value="전달"/>
+	<input type="button" onclick="self.close()" value="창닫기">  <!-- openWin() 함수에서 window.open(url, "", prop) 라고 지정해주었다면 "창닫기"버튼을 누르면 해당 창이 꺼지게 될 것!
+
+
+</body>
+</html>

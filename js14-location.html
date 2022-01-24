@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function locTest(){
+            // location.href="http://www.naver.com"   // 내가 가고싶은 위치 --- <- 누르면 바로 이전으로 감
+            // location.assign("http://www.google.com") // 내가 가고싶은 위치 --- <- 누르면 바로 이전으로 감
+            // location.replace("http://lc.multicampus.com/k-digital") // --- <- 누르면 현재 페이지를 새 페이지로 바꿔버리라는 뜻. 그래서 index로 감(첫페이지)
+            location.reload()  // 페이지 새로고침
+        }
+
+    </script>
+</head>
+<body>
+    
+    <button onclick="locTest()">경로 연습</button>
+
+
+</body>
+</html>
